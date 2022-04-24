@@ -50,9 +50,10 @@ Sub DQAnalysis()
 End Sub
 
 Sub AllStocksAnalysis()
+    yearValue = InputBox("What year would you like to run the analysis on?")
     '1) Format the output sheet on the "All Stocks Analysis" worksheet.
      Worksheets("All Stocks Analysis").Activate
-     Range("A1").Value = "All Stocks (2018)."
+     Range("A1").Value = "All Stocks (" + yearValue + ")."
     'Create a header row
      Cells(3, 1).Value = "Ticker"
      Cells(3, 2).Value = "Total Daily Volume"
@@ -80,7 +81,7 @@ Sub AllStocksAnalysis()
     Dim endingPrice As Double
     
     '3b) Activate the data worksheet.
-    Worksheets("2018").Activate
+    Worksheets(yearValue).Activate
      
     '3c) Find the number of rows to loop over.
     rowStart = 2
@@ -92,7 +93,7 @@ Sub AllStocksAnalysis()
         ticker = tickers(i)
         totalVolume = 0
         'Activate the data worksheet
-        Worksheets("2018").Activate
+        Worksheets(yearValue).Activate
         '5) Loop through rows in the data.
         For j = rowStart To RowCount
             '5a) Find the total volume for the current ticker.
@@ -116,9 +117,8 @@ Sub AllStocksAnalysis()
         Cells(4 + i, 2).Value = totalVolume
         Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
     Next i
-    
 End Sub
-
+    
 Sub formatAllStocksAnalysisTable()
     Worksheets("All Stocks Analysis").Activate
     Range("A3:C3").Font.Bold = True
@@ -140,6 +140,10 @@ Sub formatAllStocksAnalysisTable()
             Cells(i, 3).Interior.Color = xlNone
         End If
     Next i
+End Sub
+
+Sub ClearWorksheet()
+    Cells.Clear
 End Sub
 
 
