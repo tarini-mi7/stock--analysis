@@ -14,7 +14,7 @@ The purpose of this analysis was to create macros that would be easily accessibl
 As you can see from the tables, there doesn't seem to be a relationship between the stock volume (the amount of which that specific stock was traded during a given year) and it's valuation. For example, "HASI" which in 2017 increased in value by 25.8% was traded a total of 80,949,300 times. In 2018, "HASI"'s value decreased by 20.7% while being traded 104,340,600 times (nearly 24,000,000 more trades than in 2017). Perhaps, if you just looked at that single stock, You could squint and say that there might be a very weak, negative relationship between a stocks value and the amount of times it is traded. However, "CSIQ" tells a different story. In 2017, "CSIQ" increased by 33.1% while being traded 310,592,800 times. Then, in 2018, "CSIQ" stock decreased in value by 16.3% while being traded 200,879,900 times (which is about 110,000,000 less trades than in 2017). Here for "CSIQ" (and unlike "HASI") the stock was traded about 33% less in 2018 than in 2017, but still posted a loss of value like "HASI" did. Overall, there just doesn't seem to be any correlation between a stocks volume and it's performance (which is something that Steve's parents thought back in the module).
 
 In terms of execution time for the analysis, the refactored code was faster for both the 2017 and 2018 data sets than the non-refactored code. In order to illustrate the differences, I've uploaded a bar chart of the run times below.
-![alt text]https://github.com/tarini-mi7/stock--analysis/blob/main/resources/code%20run%20time%20graph.png)
+![alt text](https://github.com/tarini-mi7/stock--analysis/blob/main/resources/code%20run%20time%20graph.png)
 
 
 # Advantages and disadvantages of refactoring code.
@@ -50,6 +50,8 @@ If Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
     tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
     tickerIndex = tickerIndex + 1
 End If
+
+
 Also, the refactored script does run faster than the original for both the analysis of 2017 and 2018. I'm sure this increase in processing speed is derived from having the script only contain exactly what it needs in order to run, without any unnecessary lines. However, in the process of refactoring the code, I must've run into dozens of bugs that I created by incorrectly rewriting it. Given the time I had to put into writting it correctly, compared to the small difference in efficiency gained, (the refactored code was about 28 hundreths of a second faster) I don't know that it was worth it in a vacuum to refactor in this scenario. Of course, it was well worth it as a learning experience. And whenever I write much more complex scripts in the future, I'm sure that refactoring the code will be incredibly useful and in some cases necessary.
 
 
