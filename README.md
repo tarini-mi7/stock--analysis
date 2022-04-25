@@ -7,15 +7,15 @@ The purpose of this analysis was to create macros that would be easily accessibl
 2017 was a much better year in terms of valuation for every single one of the 12 selected stocks except for the company with "RUN" as their ticker. "DQ", the oringinal stock that Steve's parents were interested in for very rational reasons, highlights the difference in performance from '17 to '18. In 2017, "DQ" price increased 199.4% but in 2018, decreaesd 62.6%. Overall, this seems like a very volatile sector, and for Steve's parents, who can be assumed to be close to retirement, I would suggest that they look at either index funds, vanguard 20XX funds, or frankly, just fixed income options. In order to help visualize the change over time for the selected stocks, I've inserted the tables of all 12 stock's performances for both 2017 and 2018.
 
 ![alt text](https://github.com/tarini-mi7/stock--analysis/blob/main/resources/VBA%20Challenge%202017%20Image.png)
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
+![alt text](https://github.com/tarini-mi7/stock--analysis/blob/main/resources/VBA%20Challenge%202018%20Image.png)
 
 
 As you can see from the tables, there doesn't seem to be a relationship between the stock volume (the amount of which that specific stock was traded during a given year) and it's valuation. For example, "HASI" which in 2017 increased in value by 25.8% was traded a total of 80,949,300 times. In 2018, "HASI"'s value decreased by 20.7% while being traded 104,340,600 times (nearly 24,000,000 more trades than in 2017). Perhaps, if you just looked at that single stock, You could squint and say that there might be a very weak, negative relationship between a stocks value and the amount of times it is traded. However, "CSIQ" tells a different story. In 2017, "CSIQ" increased by 33.1% while being traded 310,592,800 times. Then, in 2018, "CSIQ" stock decreased in value by 16.3% while being traded 200,879,900 times (which is about 110,000,000 less trades than in 2017). Here for "CSIQ" (and unlike "HASI") the stock was traded about 33% less in 2018 than in 2017, but still posted a loss of value like "HASI" did. Overall, there just doesn't seem to be any correlation between a stocks volume and it's performance (which is something that Steve's parents thought back in the module).
 
 In terms of execution time for the analysis, the refactored code was faster for both the 2017 and 2018 data sets than the non-refactored code. The refactored code completed the analysis in .0703 seconds for 2017 as well as for 2018. The non-refactored code completed the analysis in .3593 seconds for the data from 2017, and in .3475 seconds for the analysis of the data from 2018. In order to illustrate the differences, I've uploaded a bar chart of the run times below.
 
-alt_text
+
 
 # Advantages and disadvantages of refactoring code.
 An advantage of refactoring code is that doing so makes it cleaner and easier to read. It's like editing a draft in order to make it more presentable. You're not changing the behavior, or the outcome of the code, you're just making it run more efficiently. A possible disadvantage is that you introduce bugs (which I certainly did) into the code by refactoring it. Those bugs will have to be addressed before you can run the code against the original to see if it indeed performs more efficiently.
